@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="300,130" roundcorner="10,10"> <!-- 窗口的初始尺寸 -->
+	<Font id="1" name="微软雅黑" size="18" bold="true" italic="false" />
+	<Font id="2" name="微软雅黑" size="14" bold="false" italic="false" />
+    <VerticalLayout bkcolor="#FFFFFFFF" >
+	<HorizontalLayout height="32" bkcolor="#FF555555" bkcolor2="#FF444444" bkcolor3="#FF555555"> 
+        <Text name="title" font="1" textcolor="#FFFFFFFF" padding="4,4,4,4" text="Hello World"/> 
+    </HorizontalLayout>
+	<HorizontalLayout height="10" bkcolor="#FFFFFFFF"/>
+	<Text name="textt"  font="2" padding="4,4,4,4" text="MessageBox"/>
+	<HorizontalLayout height="10" bkcolor="#FFFFFFFF"/>	
+	<HorizontalLayout name="btnArea" height="50" bkcolor="#FFFFFFFF"/>
+	</VerticalLayout>
+</Window>
