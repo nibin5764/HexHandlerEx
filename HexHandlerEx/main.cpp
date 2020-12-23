@@ -20,7 +20,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
     //CDuiMessageBox duiFrame;
     CDuiFrameWnd duiFrame;
     //CsubWnd duiFrame;
-    duiFrame.Create(NULL, _T("HexHandlerEx"), /*UI_WNDSTYLE_DIALOG*/WS_MINIMIZEBOX, WS_EX_WINDOWEDGE);
+    duiFrame.Create(NULL, _T("HexHandlerEx"), /*UI_WNDSTYLE_DIALOG*/WS_MINIMIZEBOX, WS_EX_WINDOWEDGE|WS_EX_ACCEPTFILES);
     duiFrame.CenterWindow();
     duiFrame.ShowModal();
 

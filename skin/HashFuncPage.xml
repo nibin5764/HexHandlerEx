@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <Default name="Button" value="  bkcolor=&quot;#FFFF0000&quot; height=&quot;125&quot; width=&quot;60&quot;" />
+    <VerticalLayout >
+        <HorizontalLayout height="44">
+			<Label text="HAMC Key:"  width="90" height="30" textcolor="#FFFFFFFF" font="3" />
+			<Edit  name ="editKey" width="300" height="30" bkcolor="#FFFFFFFF" textpadding="2,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="3" />
+			<Button name="btnHashChooseFile" text="选择文件" height="30" padding="10,0,0,0" bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
+        </HorizontalLayout>
+        <HorizontalLayout height="70">
+			<Button text="MD5"  name="btnHashMD5" padding="0,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA1"  name="btnHashSHA1" padding="10,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA256"  name="btnHashSHA256" padding="10,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA512"  name="btnHashSHA512" padding="10,10,0,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
+        </HorizontalLayout>
+        <HorizontalLayout height="70">
+			<Button text="MD5_HMAC"  name="btnHashMD5_HMAC" padding="0,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA1_HMAC"  name="btnHashSHA1_HMAC" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA256_HMAC"  name="btnHashSHA256_HMAC" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA512_HMAC"  name="btnHashSHA512_HMAC" padding="10,5,0,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
+        </HorizontalLayout> 
+		        <HorizontalLayout height="70">
+			<Button text="MD5_HMAC"  name="btnHashMD5_HMAC" padding="0,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA1_HMAC"  name="btnHashSHA1_HMAC" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA256_HMAC"  name="btnHashSHA256_HMAC" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="SHA512_HMAC"  name="btnHashSHA512_HMAC" padding="10,5,0,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
+        </HorizontalLayout> 
+    </VerticalLayout>
+</Window>

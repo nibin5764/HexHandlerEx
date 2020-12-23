@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainWindow.cpp" />
+    <ClCompile Include="UIMessageBox.cpp" />
+    <ClCompile Include="base64.c">
+      <Filter>function_Imp</Filter>
+    </ClCompile>
+    <ClCompile Include="StringData.cpp">
+      <Filter>DataTransform</Filter>
+    </ClCompile>
+    <ClCompile Include="StringList.cpp">
+      <Filter>DataTransform</Filter>
+    </ClCompile>
+    <ClCompile Include="cjson.cpp">
+      <Filter>function_Imp</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>function_Imp</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgorithmUtil.cpp">
+      <Filter>DataTransform</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mainWindow.h" />
+    <ClInclude Include="UIMessageBox.h" />
+    <ClInclude Include="tabPages.h" />
+    <ClInclude Include="base64.h">
+      <Filter>function_Imp</Filter>
+    </ClInclude>
+    <ClInclude Include="StringData.h">
+      <Filter>DataTransform</Filter>
+    </ClInclude>
+    <ClInclude Include="StringList.h">
+      <Filter>DataTransform</Filter>
+    </ClInclude>
+    <ClInclude Include="cJSON.h">
+      <Filter>function_Imp</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>function_Imp</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmUtil.h">
+      <Filter>DataTransform</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="function_Imp">
+      <UniqueIdentifier>{e8ad4060-4ae7-456d-b443-0c853719e191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataTransform">
+      <UniqueIdentifier>{2510a938-8a40-473e-8801-6c4f9d3b5555}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

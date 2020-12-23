@@ -10,13 +10,21 @@ public:
     virtual CDuiString GetSkinFile() { return _T("mainFrame.xml"); }
     virtual CDuiString GetSkinFolder() { return _T("..\\skin\\"); }
 
+    virtual LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam);
     virtual LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, bool& bHandled);
     virtual void Notify(TNotifyUI& msg);
     virtual LRESULT OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+    LRESULT OnDropFile(HDROP hDropInfo);
     virtual CControlUI* CreateControl(LPCTSTR pstrClass);
     virtual void InitWindow();
     void ChangeTabPage(int index);
 
+    void OnBtnsStringClicked(const CDuiString&  strName);
+    void OnBtnsBitsClicked(const CDuiString& strName);
+    void OnBtnsHashClicked(const CDuiString& strName);
+    void OnBtnsEncryptClicked(const CDuiString& strName);
+
+    void ChooseFile();
 protected:
     enumStringType m_lastType;
     StringList strList;             //×Ö·û´®Á´±í

@@ -20,7 +20,7 @@
         <HorizontalLayout width="900" height="2" >
 		<VerticalLayout bkcolor="#FF660404" bkcolor2="#FFEC4141" bkcolor3="#FF660404"/>
 		</HorizontalLayout>
-        <HorizontalLayout width="900" height="520">
+        <HorizontalLayout width="900" >
             <VerticalLayout width="200" height="520">
                 <Container width="199" height="302">
                     <Option name="opFuncStr" text="字符串" font="1" selectedfont="2" float="true" pos="12,40,0,0" width="180" height="50" bkcolor="#FF2B2B2B" selectedbkcolor="#FF333333" textcolor="#FFA0A0A0" hottextcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" group="funcType"/>
@@ -31,7 +31,7 @@
             </VerticalLayout>
 			<VerticalLayout width="3" height="520" bkcolor="#FF434343" />
 <!--             <VerticalLayout width="100" height="520"/> -->
-			<VerticalLayout width="700" height="520">
+			<VerticalLayout width="700" height="620">
                 <HorizontalLayout width="700" height="60">
 						<VerticalLayout width="100" height="60"/>
 						<Option name="opTypeStr" text="Text"  font="1" selectedfont="2" selectedunderlinecolor="#FFEC4141" bkcolor="#FF2b2b2b" selectedbkcolor="#FF333333"  textcolor="#FFA0A0A0" hottextcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" group="strType"/>
@@ -59,10 +59,20 @@
 				<HorizontalLayout width="500" height="14" />
 				<HorizontalLayout width="700" height="3" bkcolor="#FF434343"/>
 				<HorizontalLayout width="500" height="15" />
-				<TabLayout name="TabPages" width="700" height="210" selectedid="0" >
+				<TabLayout name="TabPages" width="700" height="280" selectedid="0" >
 					<HorizontalLayout width="700" height="280" >
 						<VerticalLayout width="100" height="60"/>
 						<StringFuncPage />
+						<VerticalLayout width="100" height="60"/>
+					</HorizontalLayout>
+						<HorizontalLayout width="700" height="280" >
+						<VerticalLayout width="100" height="60"/>
+						<StringFuncPage />
+						<VerticalLayout width="100" height="60"/>
+					</HorizontalLayout>
+					<HorizontalLayout width="700" height="280" >
+						<VerticalLayout width="100" height="60"/>
+						<HashFuncPage />
 						<VerticalLayout width="100" height="60"/>
 					</HorizontalLayout>
 				</TabLayout>

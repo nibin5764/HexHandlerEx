@@ -3,16 +3,16 @@
     <Default name="Button" value="  bkcolor=&quot;#FFFF0000&quot; height=&quot;125&quot; width=&quot;60&quot;" />
     <VerticalLayout >
         <HorizontalLayout height="74">
-			<Button text="转大写"  name="btnUper" padding="0,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
-			<Button text="转小写"  name="btnLower" padding="10,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
-			<Button text="去回车空格"  name="btnTrimAll" padding="10,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
-			<Button text="去,0x"  name="btnq0x" padding="10,10,0,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
+			<Button text="转大写"  name="btnStrUper" padding="0,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="转小写"  name="btnStrLower" padding="10,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="去回车空格"  name="btnStrTrimAll" padding="10,10,10,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="去,0x"  name="btnStrRemove0x" padding="10,10,0,2" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
         </HorizontalLayout>
         <HorizontalLayout height="70">
 			<Button text="测试2"  name="btnttt" padding="0,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
-			<Button text="大小端翻转"  name="btnReverse" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
-			<Button text="添加空格"  name="btnAddSpace" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
-			<Button text="添加,0x"  name="btnAdd0x" padding="10,5,0,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
+			<Button text="大小端翻转"  name="btnStrReverse" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="添加空格"  name="btnStrAddSpace" padding="10,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>
+			<Button text="添加,0x"  name="btnStrAdd0x" padding="10,5,0,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3" />
         </HorizontalLayout>
         <HorizontalLayout height="70">
 			<Button text="测试3"  name="btntttt" padding="0,5,10,10" height="40"  bkcolor="#FF444444" textcolor="#FFFFFFFF"  hotbkcolor="#FF666666" pushedbkcolor="#FF555555"  enablepushedmove="true" bordersize="0" bordercolor="#FFEC4141" align="center" font="3"/>

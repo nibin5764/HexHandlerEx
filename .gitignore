@@ -1,0 +1,11 @@
+/Debug/
+/Release/
+/bin/
+/HexHandlerEx/Debug/
+/HexHandlerEx/Release/
+/Duilib/Build/
+/Duilib/out/
+/.vs/
+*.exe
+*.pdb
+*.zip

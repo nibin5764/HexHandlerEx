@@ -16,7 +16,6 @@ Date        Author      Event
 #define __ZF_BYTEARRAY_H__
 
 #include <stdarg.h>
-#include "hd_type_def.h"
 
 class ByteArrayBuffer;
 class ByteArray 
@@ -24,69 +23,69 @@ class ByteArray
 public:
     ByteArray(void);
     ByteArray(const ByteArray &other);
-    ByteArray(const hz_byte *pbData, hz_uint32 cbData);
+    ByteArray(const unsigned char *pbData, unsigned int cbData);
     ByteArray(const char *pszStr);
-    ByteArray(hz_byte ch, hz_uint32 ulNumber);
+    ByteArray(unsigned char ch, unsigned int ulNumber);
 
     virtual ~ByteArray(void);
     
     /**
     * 往数组末尾追加长度为cbData的数据
     */
-    virtual hz_bool append(const hz_byte *pbData, hz_uint32 cbData);
+    virtual bool append(const unsigned char *pbData, unsigned int cbData);
     
     /**
     * 往字符串末尾追加字符串
     */
-    virtual hz_bool append(const char *pszStr);
-    virtual hz_bool append(const ByteArray &other);
+    virtual bool append(const char *pszStr);
+    virtual bool append(const ByteArray &other);
 
     /**
     * 往字符串末尾追加一个字符
     */
-    virtual hz_bool append(hz_byte ch);
+    virtual bool append(unsigned char ch);
 
     /**
     * 往指定位置插入一个字符
     */
-    virtual hz_bool insert(hz_uint32 ulIndex, hz_byte ch);
+    virtual bool insert(unsigned int ulIndex, unsigned char ch);
 
 	/**
 	* 往指定位置插入一个字符串(不包括\0结束符)
 	*/
-	hz_bool insert(hz_uint32 ulIndex, const char *str);
+	bool insert(unsigned int ulIndex, const char *str);
 	
 	/**
 	* 往指定位置插入一个ByteArray
 	*/
-	virtual hz_bool insert(hz_uint32 ulIndex, const ByteArray &ba);
+	virtual bool insert(unsigned int ulIndex, const ByteArray &ba);
 
     /**
     * 获取指定位置的字节内容
     */
-    virtual hz_byte at(hz_uint32 ulIndex) const;
+    virtual unsigned char at(unsigned int ulIndex) const;
 
     /**
     * 设置指定位置的值（该函数慎用，当ByteArray作为字符串使用时，小心不要在字符串中间插入0x00）
     */
-    virtual hz_bool setAt(hz_uint32 ulIndex, hz_byte ch);
+    virtual bool setAt(unsigned int ulIndex, unsigned char ch);
 
     /**
     * 将整数转按指定进制化成字符串
     *@param [in] ulNumber 待转化成字符串的10进制整数数值
     *@param [in] ulBase 采用什么进制进行转化，取值范围为[2,16],即支持从二进制开始，十六进制结束
     */
-    virtual ByteArray & fromNumber(hz_int32 ulNumber, hz_uint32 ulBase = 10);
+    virtual ByteArray & fromNumber(int ulNumber, unsigned int ulBase = 10);
 
     /**
     * 将存放的字符串转化成10进制整数
     */
-    virtual hz_int32 toNumber() const;
+    virtual int toNumber() const;
 
 	/** 
 	* 将double类型转换成字符串
 	*/
-	virtual ByteArray & fromDouble(double dValue, hz_uint8 ulPrecision = 6);
+	virtual ByteArray & fromDouble(double dValue, char ulPrecision = 6);
 
 	/** 
 	* 将字符串转换成double
@@ -110,22 +109,22 @@ public:
     /**
     * 从ulPosStart开始，查找ch第一次出现的位置
     */
-    virtual hz_int32 indexOf(hz_byte ch, hz_uint32 ulPosStart = 0) const;
+    virtual int indexOf(unsigned char ch, unsigned int ulPosStart = 0) const;
 
 	/**
     * 从ulPosStart开始，查找ba第一次出现的位置
     */
-    virtual hz_int32 indexOf(const ByteArray & ba, hz_uint32 ulPosStart = 0) const;
+    virtual int indexOf(const ByteArray & ba, unsigned int ulPosStart = 0) const;
 
     /**
     * 查找ch最后一次出现的位置
     */
-    virtual hz_int32 lastIndexOf(hz_byte ch) const;
+    virtual int lastIndexOf(unsigned char ch) const;
 
 	/**
     * 查找ba最后一次出现的位置
     */
-    virtual hz_int32 lastIndexOf(const ByteArray & ba) const;
+    virtual int lastIndexOf(const ByteArray & ba) const;
 
     /**
     * 将外部分配好的一段堆内存直接交付给CByteArry对象使用。Attach成功后,外部不允许继续使用该段内存，也不需要释放内存
@@ -133,7 +132,7 @@ public:
     *@param [in] cbData pbData指向的内存大小
     *@return TRUE表示成功，FALSE表示失败
     */
-    virtual hz_bool attach(hz_byte *pbData, hz_uint32 cbData);
+    virtual bool attach(unsigned char *pbData, unsigned int cbData);
 
     /**
     * 清除所有数据
@@ -148,7 +147,7 @@ public:
     *Do nothing if ulSize is equal to current capacity.
     *@param [in] ulSize The size of string buffer.
     */
-    virtual hz_bool resize(hz_uint32 ulSize);
+    virtual bool resize(unsigned int ulSize);
 
 	/** 
 	* 将字符串转换成大写
@@ -163,14 +162,14 @@ public:
     /**
     * 判断是否内容为空
     */
-    virtual hz_bool isEmpty(void) const;
+    virtual bool isEmpty(void) const;
 
     /**
     * 移除从ulPosition开始，长度为ulLength的数据
     *@param [in] ulPosition 起始序列号，被移除的数据包含该起始序列号指向的字符
     *@param [in] ulLength 被移除的数据长度，若该长度超过了剩余的数据长度或者ulLength为-1，均表示移除ulPosition以后的所有数据
     */
-    virtual hz_bool remove(hz_uint32 ulPosition, hz_uint32 ulLength = -1);
+    virtual bool remove(unsigned int ulPosition, unsigned int ulLength = -1);
 
 	/**
     * Replaces n characters beginning at index ulPosition with the string after
@@ -179,7 +178,7 @@ public:
     *@param [in] after The substring which will be replaced to it.
     *@return a reference to this string.
     */
-	virtual ByteArray & replace( hz_uint32 ulPosition, hz_uint32 n, const ByteArray & after);
+	virtual ByteArray & replace( unsigned int ulPosition, unsigned int n, const ByteArray & after);
 	
 	/**
     * Replaces every occurrence of the string before with the string after 
@@ -195,60 +194,60 @@ public:
     *@param [in] ulLength 截取的数据长度，若该长度超过了剩余的数据长度或者ulLength为-1，均表示取回ulPosition以后的所有数据
     *@return 返回截取到的数据
     */
-    virtual ByteArray sub(hz_uint32 ulPosition, hz_uint32 ulLength = -1) const;
+    virtual ByteArray sub(unsigned int ulPosition, unsigned int ulLength = -1) const;
 
     /**
     * 取最左边的长度为length的子串
     */
-    virtual ByteArray left(hz_uint32 length) const;
+    virtual ByteArray left(unsigned int length) const;
 
     /**
     * 取最右边的长度为length的子串
     */
-    virtual ByteArray right(hz_uint32 length) const;
+    virtual ByteArray right(unsigned int length) const;
 
     /**
     * 判断当前数据串(字符串)是否以prefix开头
     */
-    virtual hz_bool startsWith(const ByteArray &prefix) const;
+    virtual bool startsWith(const ByteArray &prefix) const;
 
     /**
     * 判断当前数据串(字符串)是否以suffix结尾
     */
-    virtual hz_bool endsWith(const ByteArray &suffix) const;
+    virtual bool endsWith(const ByteArray &suffix) const;
 
     /**
     * 将当前数据串(字符串)反转
     */
     virtual ByteArray &reverse();
 
-	virtual hz_uint32 capacity() const;
+	virtual unsigned int capacity() const;
 
 	/** 
 	* 统计字符ch在字节数组中出现的次数
 	*/
-	virtual hz_uint32 statistics(hz_char ch) const;
+	virtual unsigned int statistics(char ch) const;
 
 	/** 
 	* 统计字符ch在字节数组中出现的次数,建议使用count()而不是statistics()
 	*/
-	virtual hz_uint32 count(hz_char ch) const;
+	virtual unsigned int count(char ch) const;
 
 	/** 
 	* 统计数组ba在字节数组中出现的次数
 	*/
-	virtual hz_uint32 count(const ByteArray &ba) const;
+	virtual unsigned int count(const ByteArray &ba) const;
 
     /**
     * 直接访问存储的数据内容
     *@note 请注意不要直接修改数据内容
     */
-    virtual const hz_byte *data(void) const;
+    virtual const unsigned char *data(void) const;
 
     /**
     * 字节数组或字符串的数据长度（此长度不代表已分配的内存长度，只代表有效数据长度）
     */
-    virtual hz_uint32 length() const;
+    virtual unsigned int length() const;
 
 	/**
     * Safely builds a formatted string from the format string cFormat and an arbitrary list of arguments.
@@ -313,24 +312,24 @@ public:
 
     bool operator <(const ByteArray &other) const;
 
-    hz_byte operator[](hz_uint32 ulIndex) const;
+    unsigned char operator[](unsigned int ulIndex) const;
 
     friend ByteArray operator+(const char *pszStr, const ByteArray &right);
 
 protected:
-	hz_bool _init();
+	bool _init();
 
-    virtual hz_bool resizeBuffer(hz_uint32 ulLength);
+    virtual bool resizeBuffer(unsigned int ulLength);
 
 	ByteArray & format_(const char *pszFormat, va_list ap);
 
-	hz_bool replaceInStr_(hz_byte *pszOldStr, hz_uint32 ulOldStrLen,
-						hz_uint32 ulFrom, hz_uint32 ulLen, 
-						hz_byte *pszReplaceStr, hz_uint32 ulRepStrLen);
+	bool replaceInStr_(unsigned char *pszOldStr, unsigned int ulOldStrLen,
+						unsigned int ulFrom, unsigned int ulLen, 
+						unsigned char *pszReplaceStr, unsigned int ulRepStrLen);
 
-    hz_uint32 m_ulDataSize;      //数组内包含的数据长度
-    hz_uint32 m_ulAllocSize;     //数组已分配的内存大小
-    hz_byte *m_pbData;          //内容缓冲区
+    unsigned int m_ulDataSize;      //数组内包含的数据长度
+    unsigned int m_ulAllocSize;     //数组已分配的内存大小
+    unsigned char *m_pbData;          //内容缓冲区
 };
 
 /** 
@@ -351,31 +350,31 @@ public:
 
 	ByteArray toByteArray() const;
 
-	virtual hz_bool append(const hz_byte* pbData, hz_uint32 cbData);
-	virtual hz_bool append(const ByteArray &other);
+	virtual bool append(const unsigned char* pbData, unsigned int cbData);
+	virtual bool append(const ByteArray &other);
 
 	void clear();
 
-	hz_bool isEmpty() const;
+	bool isEmpty() const;
 	/**
     * 直接访问存储的数据内容
     *@note 请注意不要直接修改数据内容
     */
-    virtual const hz_byte *data(void) const;
+    virtual const unsigned char *data(void) const;
 
     /**
     * 字节数组或字符串的数据长度（此长度不代表已分配的内存长度，只代表有效数据长度）
     */
-    virtual hz_uint32 length() const;
+    virtual unsigned int length() const;
 
-	virtual hz_uint32 capacity() const;
+	virtual unsigned int capacity() const;
 
-	hz_byte operator[](hz_uint32 ulIndex) const;
+	unsigned char operator[](unsigned int ulIndex) const;
 
 private:
-	hz_uint32 m_ulDataSize;      //数组内包含的数据长度
-	hz_uint32 m_ulAllocSize;     //数组已分配的内存大小
-	hz_byte *m_pbData;          //内容缓冲区
+	unsigned int m_ulDataSize;      //数组内包含的数据长度
+	unsigned int m_ulAllocSize;     //数组已分配的内存大小
+	unsigned char *m_pbData;          //内容缓冲区
 };
 
 #endif//__ZF_BYTEARRAY_H__
