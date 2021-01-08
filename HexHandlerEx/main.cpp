@@ -1,3 +1,4 @@
+#include"UDP.h"
 #include <windows.h>
 #include "..\DuiLib\UIlib.h"
 #include"mainWindow.h"
@@ -16,6 +17,9 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCm
 
     CPaintManagerUI::SetInstance(hInstance);
 
+    //UDP udp(60000);
+    //udp.Init();
+    //udp.Run();
     
     //CDuiMessageBox duiFrame;
     CDuiFrameWnd duiFrame;

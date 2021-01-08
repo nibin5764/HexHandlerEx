@@ -13,14 +13,17 @@
     <ClCompile Include="StringList.cpp">
       <Filter>DataTransform</Filter>
     </ClCompile>
-    <ClCompile Include="cjson.cpp">
-      <Filter>function_Imp</Filter>
-    </ClCompile>
     <ClCompile Include="Utility.cpp">
       <Filter>function_Imp</Filter>
     </ClCompile>
     <ClCompile Include="AlgorithmUtil.cpp">
       <Filter>DataTransform</Filter>
+    </ClCompile>
+    <ClCompile Include="UDP.cpp">
+      <Filter>NetWork</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgPackage.cpp">
+      <Filter>NetWork</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -36,14 +39,20 @@
     <ClInclude Include="StringList.h">
       <Filter>DataTransform</Filter>
     </ClInclude>
-    <ClInclude Include="cJSON.h">
-      <Filter>function_Imp</Filter>
-    </ClInclude>
     <ClInclude Include="Utility.h">
       <Filter>function_Imp</Filter>
     </ClInclude>
     <ClInclude Include="AlgorithmUtil.h">
       <Filter>DataTransform</Filter>
+    </ClInclude>
+    <ClInclude Include="UDP.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgDef.h">
+      <Filter>NetWork</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgPackage.h">
+      <Filter>NetWork</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +61,9 @@
     </Filter>
     <Filter Include="DataTransform">
       <UniqueIdentifier>{2510a938-8a40-473e-8801-6c4f9d3b5555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetWork">
+      <UniqueIdentifier>{a32082d1-31eb-4727-9b66-d770aff5b605}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
